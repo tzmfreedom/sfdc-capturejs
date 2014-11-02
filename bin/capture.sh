@@ -1,4 +1,4 @@
-while getopts u:p:e: OPT
+while getopts "u:p:e:q:o:" OPT
 do
     case $OPT in
         u)  USERNAME=$OPTARG
@@ -7,11 +7,13 @@ do
             ;;
         e)  ENV=$OPTARG
             ;;
+        q)  QUERY=$OPTARG
+            ;;
+        o)  OUTPUT_DAT=$OPTARG
+            ;;
     esac
 done
 
-OUTPUT_DAT=profilelist.dat
-QUERY="SELECT id FROM Account LIMIT 3"
 coffee query.coffee -u ${USERNAME} -p ${PASSWORD} -e ${ENV} -q "${QUERY}"  | \
 tail -n +2 > ${OUTPUT_DAT}
 casperjs capture.coffee --un=${USERNAME} --pw=${PASSWORD} --env=${ENV} --infile=${OUTPUT_DAT}
