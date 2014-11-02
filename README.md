@@ -5,17 +5,25 @@ This tool use [PhantomJS](http://phantomjs.org/) and [CasperJS](http://casperjs.
 
 ## Installation
 ```bash
-git clone git@github.com:tzmfreedom/sfdc-capturejs.git
-npm install
+$ git clone git@github.com:tzmfreedom/sfdc-capturejs.git
+$ cd sfdc-capturejs
+$ npm install
 ```
 
 ## Usage
-for Production or Developer Environment.
 ```bash
-bin/capture.sh -u test@example.com -p hogefuga -o out.dat -q "SELECT id FROM Profile"
+$ bin/capture.sh -u "username" -p "password" -o "output filename for record ids." -e "test or prod" -q "soql"
 ```
 
-for Sandbox Environment.
+Example for Production or Developer Environment.
 ```bash
-bin/capture.sh -u test@example.com.sandbox -p hogefuga -o out.dat -q "SELECT id FROM Profile"
+$ bin/capture.sh -u test@example.com -p hogefuga -o out.dat -q "SELECT id FROM Profile"
 ```
+
+Example for Sandbox Environment.
+```bash
+$ bin/capture.sh -u test@example.com.sandbox -p hogefuga -o out.dat -e test -q "SELECT id FROM Profile"
+```
+
+## License
+The MIT License See [LICENSE](https://github.com/tzmfreedom/sfdc-capturejs/blob/master/LICENSE) file.
