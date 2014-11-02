@@ -1,12 +1,11 @@
 # Capture Tool for Salesforce
-
 ## Description
 This is capture tool for [Salesforce.com](http://www.salesforce.com/).
-This tool use [PhantomJS]() and [CasperJS]()
+This tool use [PhantomJS](http://phantomjs.org/) and [CasperJS](http://casperjs.org/).
 
 ## Installation
 ```bash
-git clone git@github.com:tzmfreedom/sf_capturejs.git
+git clone git@github.com:tzmfreedom/sfdc-capturejs.git
 npm install
 ```
 
